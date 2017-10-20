@@ -1,2 +1,1 @@
-# admissions
-Predict student admissions
+Predict student admissions based on GPA, class rank, and test scores. Will use deep neural network
