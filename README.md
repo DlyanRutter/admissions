@@ -1,1 +1,1 @@
-Predict student admissions based on GPA, class rank, and test scores. Will use deep neural network. Trying out various formats using TensorFlow
+Predict student admissions based on GPA, class rank, and test scores. Will use deep neural network. Trying out various formats using TensorFlow. Will also establish a network using Keras and compare accuracy
