@@ -67,6 +67,22 @@ with graph.as_default():
     out = {'weights': tf.Variable(initializer([h3_nodes, num_labels])),
            'biases' : tf.Variable(tf.zeros([num_labels]))}
     
+    #save weights    
+    weight_saver = tf.train.Saver()
+    with tf.Session() as sess:
+        sess.run(tf.global_variables_initializer())
+        print "Weights: "
+        print sess.run(hl1['weights1'])
+        print sess.run(hl2['weights2'])
+        print sess.run(hl3['weights3'])
+        print sess.run(out['weights4'])
+        print "Biases: "
+        print sess.run(hl1['biases1'])
+        print sess.run(hl2['biases2'])
+        print sess.run(hl3['biases3'])
+        print sess.run(out['biases4'])
+        weight_saver.save(sess, 'my model')
+    
     #establish a keep_probability placeholder for logits and compute logits
     #for each layer
     keep_prob = tf.placeholder(tf.float32)
